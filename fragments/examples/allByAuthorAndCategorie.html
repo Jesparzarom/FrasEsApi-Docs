@@ -1,0 +1,40 @@
+ <!-- Request -->
+ <div class="my-5">
+    <h3 class="font-bold">Request</h3>
+    <pre><code
+        class="lang-yaml text-xs">https://frasesapi.vercel.app/v1/frases/buscar/?autor=&lt;str:autor&gt;&categoria=&lt;str:categoria&gt;</code></pre>
+</div>
+
+<!-- Responses -->
+<div class="my-5">
+    <h3 class="font-bold">Ejemplo de Response</h3>
+    <p class="text-sm">Devuelve una lista de frases de una autor  <code
+        class="text-secondary">response.autor</code> en determinada categoria <code
+            class="text-secondary">response.categoria</code> dentro del objeto <code
+            class="text-secondary">response.frases</code></p>
+    <pre><code class="lang-json shadow-lg rounded-bottom-3 text-xs">{
+    
+    "autor": "Linus Torvalds",
+    "categoria": "programacion",
+    "frases": [
+        {
+            "autor": "Linus Torvalds",
+            "categoria": "programacion",
+            "frase": "Talk is cheap. Show me the code.",
+            "key": "linusprog01"
+        },
+        {
+            "autor": "Linus Torvalds",
+            "categoria": "programacion",
+            "frase": "Software is like sex: it's better when it's free.",
+            "key": "linusprog02"
+        }
+        ...,
+    ],
+    "mensaje": "solicitud exitosa",
+    "status": 200,
+    "total": 2
+}</code></pre>
+</div>
+
+<script>hljs.highlightAll()</script>

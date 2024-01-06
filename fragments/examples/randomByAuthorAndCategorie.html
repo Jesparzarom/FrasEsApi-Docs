@@ -1,0 +1,24 @@
+ <!-- Request -->
+ <div class="my-5">
+    <h3 class="font-bold">Request</h3>
+    <pre><code
+        class="lang-yaml text-xs">https://frasesapi.vercel.app/v1/frases/aleatoria/?autor=&lt;str:autor&gt;&categoria=&lt;str:categoria&gt;</code></pre>
+</div>
+
+<!-- Responses -->
+<div class="my-5">
+    <h3 class="font-bold">Ejemplo de Response</h3>
+    <p class="text-sm">Devuelve un objeto de frase totalmente aleatoria de determinado autor en una categoria específica. 
+        Por ejemplo <code class="text-secondary">autor=guido+van+rossum&categoria=programacion</code></p>
+    <pre><code class="lang-json shadow-lg rounded-bottom-3 text-xs">{
+    "frase": {
+        "autor": "Guido van Rossum",
+        "categoria": "programacion",
+        "frase": "En la programación, como en la poesía, la belleza está en los ojos del programador.",
+        "key": "guidoprog01"
+    }
+
+}</code></pre>
+</div>
+
+<script>hljs.highlightAll()</script>

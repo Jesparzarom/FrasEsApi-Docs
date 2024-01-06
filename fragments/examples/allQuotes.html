@@ -1,0 +1,31 @@
+ <!-- Request -->
+<div class="my-5">
+    <h3 class="font-bold">Request</h3>
+    <pre><code
+        class="lang-yaml text-xs">https://frasesapi.vercel.app/v1/frases/</code></pre>
+</div>
+
+<!-- Responses -->
+<div class="my-5">
+    <h3 class="font-bold">Ejemplo de Response</h3>
+    <p class="text-sm">Devuelve una lista de frases dentro del objeto <code
+            class="text-secondary">response.frases</code> con los campos
+        "autor", "categoria", "frase", "key"</p>
+    <pre><code class="lang-json shadow-lg rounded-bottom-3 text-xs">{
+    "frases": [
+        ...,    
+
+        {
+            "autor": "Zig Ziglar",
+            "categoria": "exito",
+            "frase": "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
+            "key": "ziglarexito07"
+        }
+    ],
+    "mensaje": "solicitud exitosa",
+    "status": 200,
+    "total": 207
+}</code></pre>
+</div>
+
+<script>hljs.highlightAll()</script>
