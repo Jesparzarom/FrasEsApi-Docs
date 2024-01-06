@@ -1,0 +1,27 @@
+ <div>
+     <p class="text-base font-thin leading-relaxed my-5">Devuelve un objeto de
+         frase totalmente aleatoria de determinada categoria.
+         Por ejemplo <code
+             class="text-secondary">categoria="sabiduria"</code></p>
+</div><!-- Request -->
+<div class="my-5">
+    <h3 class="font-bold">Request</h3>
+    <pre><code
+        class="lang-yaml text-xs rounded-lg ">https://frasesapi.vercel.app/v1/frases/aleatoria/?categoria=&lt;str:categoria&gt;</code></pre>
+</div>
+
+<!-- Responses -->
+<div class="my-5">
+    <h3 class="font-bold">Ejemplo de Response</h3>
+    <pre><code class="lang-json shadow-lg rounded-lg text-xs">{
+    "frase": {
+        "autor": "Confucio",
+        "categoria": "sabiduria",
+        "frase": "La verdadera sabiduría está en reconocer la propia ignorancia.",
+        "key": "confuciowisdom04"
+    }
+
+}</code></pre>
+</div>
+
+<script>hljs.highlightAll()</script>

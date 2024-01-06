@@ -1,123 +1,138 @@
 
 <main>
-    <section class="sm:px-5 md:px-10 mt-10">
+    <section class="px-5 md:px-20 lg:px-44 mt-10 mb-16">
 
-        <h2 class="text-3xl mb-5" id="bases">OBTENER LISTAS GENERALES</h2>
-        <div class="collapse collapse-plus bg-neutral rounded-none shadow-lg">
-            <input type="radio" name="my-accordion-1" checked="checked" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-                hx-get="../fragments/examples/allQuotes.html"
+        <!-------------------------------GENERALES---------------------------->
+        <h2 class="text-xl md:text-3xl mt-10" id="bases">OBTENER LISTAS GENERALES</h2>
+        <hr class="h-px my-8 bg-secondary border-0">
+        <!-- todas las frases -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+                hx-get="../fragments/api_requests/allQuotes.html"
                 hx-target="#allQuotes" hx-trigger="load" hx-swap="innerHTML">
-                TODAS LAS FRASES
+                frases
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="allQuotes"></article>
             </div>
         </div>
-
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/allAuthors.html"
+        <!-- todos los autores -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/allAuthors.html"
             hx-target="#allAuthors" hx-trigger="load" hx-swap="innerHTML">
-                TODOS LOS AUTORES
+                autores
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="allAuthors"></article>
             </div>
         </div>
-
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/allCategories.html"
+        <!-- todas las categorías -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/allCategories.html"
             hx-target="#allCategories" hx-trigger="load" hx-swap="innerHTML">
-                TODAS LAS CATEGORÍAS
+                categorías
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="allCategories"></article>
             </div>
         </div>
 
-        <h2 class="text-3xl my-8" id="queries">OBTENER BÚSQUEDAS</h2>
 
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/allByAuthor.html"
+
+
+        <!-------------------------------BUSQUEDAS---------------------------->
+        <h2 class="text-xl md:text-3xl  mt-10" id="queries">OBTENER BÚSQUEDAS</h2>
+        <hr class="h-px my-8 bg-secondary border-0">
+
+        <!-- todas las frases por autor -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/allByAuthor.html"
             hx-target="#allByAuthor" hx-trigger="load" hx-swap="innerHTML">
-                BUSCAR FRASES POR AUTOR
+                frases por autor
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="allByAuthor"></article>
             </div>
         </div>
-
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/allByCategorie.html"
+        <!-- todas las frases por categoría -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/allByCategorie.html"
             hx-target="#allByCategorie" hx-trigger="load" hx-swap="innerHTML">
-                BUSCAR FRASES POR CATEGORÍA
+                frases por categoría
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="allByCategorie"></article>
             </div>
         </div>
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/allByAuthorAndCategorie.html"
+        <!-- todas las frases por autor y categoría -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/allByAuthorAndCategorie.html"
             hx-target="#allByAuthorAndCategorie" hx-trigger="load" hx-swap="innerHTML">
-                BUSCAR FRASES POR AUTOR Y CATEGORÍA
+                frases por autor y categoría
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="allByAuthorAndCategorie"></article>
             </div>
         </div>
 
-        <h2 class="text-3xl my-8" id="aleatorias">OBTENER FRASES ALEATORIAS</h2>
 
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/random.html"
+        <!-------------------------------ALEATORIAS---------------------------->
+        <h2 class="text-xl md:text-3xl  mt-10" id="aleatorias">OBTENER FRASE ALEATORIA</h2>
+        <hr class="h-px my-8 bg-secondary border-0">
+        <!-- aleatoria -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/random.html"
             hx-target="#random" hx-trigger="load" hx-swap="innerHTML">
-                OBTENER FRASE ALEATORIA
+                frase aleatoria
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="random"></article>
             </div>
         </div>
-
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/randomByAuthor.html"
+        <!-- aleatoria por autor -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/randomByAuthor.html"
             hx-target="#randomByAuthor" hx-trigger="load" hx-swap="innerHTML">
-                BUSCAR FRASE ALEATORIA POR AUTOR
+                frase aleatoria por autor
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="randomByAuthor"></article>
             </div>
         </div>
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/randomByCategorie.html"
+        <!-- aleatoria por categoría -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/randomByCategorie.html"
             hx-target="#randomByCategorie" hx-trigger="load" hx-swap="innerHTML">
-                BUSCAR FRASE ALEATORIA POR CATEGORÍA
+                frase aleatoria por categoría
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="randomByCategorie"></article>
             </div>
         </div>
-        <div class="collapse collapse-plus bg-neutral rounded-none">
-            <input type="radio" name="my-accordion-1" />
-            <div class="collapse-title text-xl font-medium text-neutral-content"
-            hx-get="../fragments/examples/randomByAuthorAndCategorie.html"
+        <!-- aleatoria por autor y categoría -->
+        <div class="collapse collapse-plus bg-base-300 rounded-none">
+            <input type="radio" name="codeAccordion" />
+            <div class="collapse-title text-xl font-medium text-base-300-content"
+            hx-get="../fragments/api_requests/randomByAuthorAndCategorie.html"
             hx-target="#randomByAuthorAndCategorie" hx-trigger="load" hx-swap="innerHTML">
-                BUSCAR FRASE ALEATORIA POR AUTOR Y CATEGORÍA
+                frase aleatoria por autor y categoría
             </div>
             <div class="collapse-content overflow-auto bg-base-100">
                 <article id="randomByAuthorAndCategorie"></article>
