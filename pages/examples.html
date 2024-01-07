@@ -1,15 +1,45 @@
 <main class="px-5">
     <article class="mt-5">
-      <p id="tab1">
-        Kitsch fanny pack yr, farm-to-table cardigan cillum commodo reprehenderit
-        plaid dolore cronut meditation. Tattooed polaroid veniam, anim id cornhole
-        hashtag sed forage. Microdosing pug kitsch enim, kombucha pour-over sed irony
-        forage live-edge. Vexillologist eu nulla trust fund, street art blue bottle
-        selvage raw denim. Dolore nulla do readymade, est subway tile affogato hammock
-        8-bit. Godard elit offal pariatur you probably haven't heard of them
-        post-ironic. Prism street art cray salvia.
-      </p>
-    </article>
+        <h1 class="text-center text-xl md:text-3xl font-bold">EJEMPLOS</h1>
+        <div class="hero min-h-screen">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
 
-  </main>
-  
+                    <div id="content"><p
+                            class="py-1 font-thin text-lg md:text-2xl">¿Quieres
+                            una frase al azar?.. ¡intentalo!</p></div>
+
+                    <article>
+                        <div hx-ext="client-side-templates">
+                            <button
+                                hx-get="https://frasesapi.vercel.app/v1/frases/aleatoria/"
+                                hx-swap="innerHTML"
+                                hx-target="#content"
+                                mustache-template="foo"
+                                class="btn btn-sm btn-secondary rounded-none mt-10">
+                                ¡Aleatoria!
+                            </button>
+
+                            <template id="foo">
+                                <div
+                                    class="card w-90 bg-neutral text-neutral-content shadow-lg shadow-indigo-900/40 ">
+                                    <div class="card-body items-center text-center">
+                                        <div
+                                            class="badge badge-info">{{frase.categoria}}</div>
+                                        <p
+                                            class="py-1 font-thin text-lg md:text-2xl">
+                                            <i>"{{frase.frase}}"</i>
+                                        </p>
+                                        <h6
+                                            class="text-xs font-bold">~{{frase.autor}}~</h6>
+                                    </div>
+                                </div>
+                            </template>
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>

@@ -12,6 +12,8 @@
         <!----------- SCRIPTS ----------->
         <!-- TailwindCSS script -->
         <script src="https://cdn.tailwindcss.com"></script>
+        <!-- simpleicons scrips -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-icons@11.0.0/index.min.js"></script>
         <!-- htmx core script-->
         <script src="https://unpkg.com/htmx.org@1.9.10"
             integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
@@ -61,7 +63,9 @@
         </div>
 
         <!-- FOOTER -->
-        <footer></footer>
+        <footer hx-get="./components/footer.html" hx-target="this"
+            hx-trigger="load"
+            hx-swap="outerHTML" role="nav" class="mt-10"></footer>
 
         <!-- SCRIPTS -->
         <script>hljs.highlightAll();</script>
