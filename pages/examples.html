@@ -3,35 +3,30 @@
         <h1 class="text-center text-xl md:text-3xl font-bold">EJEMPLOS</h1>
         <div class="hero min-h-screen">
             <div class="hero-content text-center">
-                <div class="max-w-md">
+                                <div class="max-w-md">
 
-                    <div id="content"><p
-                            class="py-1 font-thin text-lg md:text-2xl">¿Quieres
-                            una frase al azar?.. ¡intentalo!</p></div>
+                    <div id="content" class="card w-96 bg-neutral text-neutral-content shadow-lg shadow-indigo-900/40  min-h-[25vh] flex items-center justify-center">
+                        <p class="text-4xl card-body">
+                            ¿Quieres una frase al azar?.. ¡intentalo!
+                        </p>
+                    </div>
 
                     <article>
                         <div hx-ext="client-side-templates">
-                            <button
-                                hx-get="https://frasesapi.vercel.app/v1/frases/aleatoria/"
-                                hx-swap="innerHTML"
-                                hx-target="#content"
-                                mustache-template="foo"
-                                class="btn btn-sm btn-secondary rounded-none mt-10">
+                            <a hx-get="https://frasesapi.vercel.app/v1/frases/aleatoria/" hx-swap="innerHTML"
+                                hx-target="#content" mustache-template="foo"
+                                class="btn btn-lg btn-primary  mt-10">
                                 ¡Aleatoria!
-                            </button>
+                            </a>
 
                             <template id="foo">
-                                <div
-                                    class="card w-90 bg-neutral text-neutral-content shadow-lg shadow-indigo-900/40 ">
+                                <div class=" ">
                                     <div class="card-body items-center text-center">
-                                        <div
-                                            class="badge badge-info">{{frase.categoria}}</div>
-                                        <p
-                                            class="py-1 font-thin text-lg md:text-2xl">
+                                        <div class="badge badge-info">{{frase.categoria}}</div>
+                                        <p class="py-1 font-thin text-lg md:text-2xl">
                                             <i>"{{frase.frase}}"</i>
                                         </p>
-                                        <h6
-                                            class="text-xs font-bold">~{{frase.autor}}~</h6>
+                                        <h6 class="text-xs font-bold">~{{frase.autor}}~</h6>
                                     </div>
                                 </div>
                             </template>
