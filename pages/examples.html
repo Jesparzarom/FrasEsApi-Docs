@@ -37,16 +37,10 @@
             </div>
         </div>
     </article>
-        <script>
+    <script>
         const quoteContainer = document.getElementById("content")
-        const loader = document.getElementById("loader")
-        const getQuote = document.getElementById("getQuoteBtn")
-
-        getQuote.addEventListener(("click"), () => loader.classList.remove("hidden"))
-
-        quoteContainer.addEventListener(("change"), () => (
-            loader.classList.add("hidden")
-        ))
-
+        getQuote.addEventListener(("click"), () => {
+            quoteContainer.innerHTML = '<span class="loading loading-ring loading-lg w-32"></span>'
+        })
     </script>
 </main>
